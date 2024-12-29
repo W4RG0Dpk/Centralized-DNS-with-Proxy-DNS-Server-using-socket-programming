@@ -18,6 +18,8 @@ This project demonstrates how **DNS (Domain Name System)** operates behind the s
 - IP address resolution
  
 This project is ideal for students, developers, and enthusiasts interested in networking fundamentals.
+![project](screenshots/g0.webp)
+
 
 ---
 
@@ -133,10 +135,11 @@ To show the Demo of the project
 
 ### **DNS Resolution Output**
 main_DNS output:
-![DNS Resolution Output](screenshots/dns server output.png)
+![DNS Resolution Output](screenshots/main.png)
 
 Proxy_DNS output:
-![DNS Resolution Output](screenshots/proxy server output.png)
+![DNS Resolution Output](screenshots/proxy.jpg)
+
 ---
 
 ## **🔄 Future Enhancements**
