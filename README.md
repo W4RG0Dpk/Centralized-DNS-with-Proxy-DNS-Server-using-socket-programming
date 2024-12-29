@@ -1,93 +1,81 @@
-# README for Centralized DNS with Proxy DNS Server
+# 🌐 **Centralized DNS with Proxy DNS Server**
+
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
+![Flask](https://img.shields.io/badge/Flask-2.x-orange)
+![SQLite](https://img.shields.io/badge/SQLite-Database-green)
+![Status](https://img.shields.io/badge/Status-Active-brightgreen)
+![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-yellowgreen)
 
 ---
 
-## 🌐 **Project Title:** Centralized DNS with Proxy DNS Server
+## **📖 Overview**
 
-**A comprehensive system demonstrating how DNS works behind the scenes, implementing load distribution, hostname aliasing, and mail aliasing.**
+This project demonstrates how **DNS (Domain Name System)** operates behind the scenes by integrating a **Centralized DNS** with a **Proxy DNS Server**. Built using **socket programming**, it simplifies DNS resolution while incorporating features like:
 
----
+- Load distribution.
+- Hostname aliasing.
+- Mail aliasing.
 
-## 🎨 **Overview**
-
-This project emulates the real-world DNS resolution process by integrating a **Centralized DNS** with a **Proxy DNS Server**, using **socket programming**. It simplifies the complex layers of DNS lookup for end-users, showcasing an abstraction of what happens when they enter a URL in their browser.
-
-Key features include:
-
-- **Proxy DNS Server:** Acts as a low-level local DNS server for faster response times.
-- **Centralized DNS:** Resolves requests forwarded by the proxy server when not available locally.
-- **Load Distribution:** Efficient IP rotation for scalability and performance.
-- **Hostname Aliasing:** Simplifies URLs with canonical name records (CNAME).
-- **Mail Aliasing:** Supports mail server lookups with MX records.
-- **Domain Addition:** Clients can add new domains dynamically.
+This project is ideal for students, developers, and enthusiasts interested in networking fundamentals.
 
 ---
 
-## 🔗 **System Architecture**
+## **🔗 System Architecture**
 
-The project is divided into:
+The project is divided into the following components:
 
-1. **Client Application:** A Flask-based web interface to send DNS requests and interact with the server.
-2. **Proxy DNS Server:** Handles local requests and forwards unresolved queries to the main DNS server.
-3. **Main DNS Server:** Manages a centralized database for DNS resolution.
-4. **Database Management:** SQLite databases for main DNS, proxy DNS, canonical records, and mail aliases.
+1. **Client Application**
+   - A web-based interface built with Flask for user interactions.
 
----
+2. **Proxy DNS Server**
+   - Handles local DNS requests and forwards unresolved queries to the main DNS server.
 
-## 🌐 **How It Works**
+3. **Centralized DNS Server**
+   - Maintains a centralized database for DNS resolution, including load distribution and aliasing.
 
-1. **Client Interaction:**\
-   The client sends a query (e.g., domain lookup) via the web interface.
-2. **Proxy Resolution:**\
-   The proxy DNS attempts to resolve the query locally.
-3. **Fallback to Main DNS:**\
-   If unresolved, the proxy forwards the query to the main DNS.
-4. **Database Lookup:**\
-   The main DNS fetches data from its database or adds new entries as needed.
-5. **Response to Client:**\
-   Resolved IPs, aliases, or error messages are returned to the client.
+4. **Database Management**
+   - SQLite databases store records for domains, canonical names, mail aliases, and cached data.
+
+![System Architecture](https://via.placeholder.com/800x400.png?text=System+Architecture+Diagram)
 
 ---
 
-## 🎡 **Features in Detail**
+## **🎡 Features**
 
 ### **1. Load Distribution**
-
-- Ensures fair distribution of traffic across multiple IPs for the same domain.
-- Implemented via round-robin rotation.
+- Ensures fair distribution of traffic across multiple IPs for the same domain using round-robin rotation.
 
 ### **2. Hostname Aliasing**
-
-- Maps multiple aliases to canonical names, e.g., `yt.in -> youtube.com`.
+- Maps multiple aliases to canonical names (e.g., `yt.in ⇒ youtube.com`).
 
 ### **3. Mail Aliasing**
-
-- Handles mail server lookups using MX records.
+- Supports mail server lookups using MX (Mail Exchange) records.
 
 ### **4. Dynamic Domain Addition**
-
-- Allows clients to register new domains with auto-generated IPs.
+- Clients can register new domains with auto-generated IPs.
 
 ### **5. Proxy Optimization**
-
-- Local caching in the proxy for faster lookups and reduced main DNS load.
-
----
-
-## 📚 **Code Structure**
-
-- `` Web client using Flask for user interactions.
-- `` Proxy DNS server handling local lookups and main DNS forwarding.
-- `` Centralized DNS server with load distribution and aliasing.
-- `` Initializes databases with predefined records.
+- Local caching in the proxy server for faster lookups and reduced main DNS load.
 
 ---
 
-## 🚀 **How to Run**
+## **📚 Code Structure**
+
+```
+|-- client.py            # Flask-based web client
+|-- Proxy_DNS.py         # Proxy DNS server script
+|-- main_DNS.py          # Main DNS server script
+|-- add_records.py       # Script to initialize SQLite databases
+|-- databases/           # Folder containing SQLite database files
+```
+
+---
+
+## **🚀 How to Run**
 
 ### **Step 1:** Set Up Databases
 
-Run `add_records.py` to create and populate the SQLite databases:
+Run the script to create and populate the SQLite databases:
 
 ```bash
 python add_records.py
@@ -99,6 +87,7 @@ python add_records.py
    ```bash
    python main_DNS.py
    ```
+
 2. Start the Proxy DNS Server:
    ```bash
    python Proxy_DNS.py
@@ -116,27 +105,38 @@ Access the web interface at `http://127.0.0.1:5000`.
 
 ---
 
-## 📷 **Screenshots**
+## **📷 Screenshots**
 
 ### **Client Web Interface**
+![Client Web Interface](https://via.placeholder.com/800x400.png?text=Client+Web+Interface)
 
 ### **DNS Resolution Output**
+![DNS Resolution Output](https://via.placeholder.com/800x400.png?text=DNS+Resolution+Output)
 
 ---
 
-## 🔄 **Future Enhancements**
+## **🔄 Future Enhancements**
 
-- Add support for IPv6 records.
+- Add support for **IPv6 records**.
 - Implement advanced caching techniques for the proxy server.
 - Introduce HTTPS for secure communications.
 
 ---
 
+## **🤝 Contributions**
 
+We welcome contributions! Feel free to fork this repository, make enhancements, and submit pull requests.
 
-Feel free to contribute to this project and make DNS resolution even more fascinating!
+---
 
-**Contact:** For queries, reach out at [velamalapavankrishna@gmail.com](mailto\:velamalapavankrishna@gmail.com).
-OR
-you can reach me out at insta : pavankrishna_v
+## **📬 Contact**
+
+For queries or feedback, reach out via:
+
+- **Email:** [velamalapavankrishna@gmail.com](mailto:velamalapavankrishna@gmail.com)
+- **Instagram:** [@pavankrishna_v](https://www.instagram.com/pavankrishna_v/)
+
+---
+
+**Made with ❤️ by [V. Pavan Krishna]**
 
