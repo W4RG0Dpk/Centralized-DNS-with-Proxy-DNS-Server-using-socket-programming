@@ -15,7 +15,8 @@ This project demonstrates how **DNS (Domain Name System)** operates behind the s
 - Load distribution.
 - Hostname aliasing.
 - Mail aliasing.
-
+- IP address resolution
+ 
 This project is ideal for students, developers, and enthusiasts interested in networking fundamentals.
 
 ---
@@ -66,7 +67,8 @@ The project is divided into the following components:
 |-- Proxy_DNS.py         # Proxy DNS server script
 |-- main_DNS.py          # Main DNS server script
 |-- add_records.py       # Script to initialize SQLite databases
-|-- databases/           # Folder containing SQLite database files
+|-- databases            # containing SQLite database files
+|-- templates/index.html # contaning the html file  
 ```
 
 ---
@@ -106,9 +108,10 @@ Access the web interface at `http://127.0.0.1:5000`.
 ---
 
 ## **📷 Screenshots**
+To show the Demo of the project 
 
 ### **Client Web Interface**
-![Client Web Interface](https://via.placeholder.com/800x400.png?text=Client+Web+Interface)
+![Client Web Interface](screenshots/)
 
 ### **DNS Resolution Output**
 ![DNS Resolution Output](https://via.placeholder.com/800x400.png?text=DNS+Resolution+Output)
