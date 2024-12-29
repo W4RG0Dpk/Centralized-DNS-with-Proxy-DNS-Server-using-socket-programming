@@ -37,7 +37,7 @@ The project is divided into the following components:
 4. **Database Management**
    - SQLite databases store records for domains, canonical names, mail aliases, and cached data.
 
-![System Architecture](screenshot/g3.webp)
+![System Architecture](screenshots/g3.webp)
 
 ---
 
@@ -132,8 +132,11 @@ To show the Demo of the project
 ![Client Web Interface](screenshots/test-10.png)
 
 ### **DNS Resolution Output**
-![DNS Resolution Output](screenshots/dns-server-output.png)
+main_DNS output:
+![DNS Resolution Output](screenshots/dns server output.png)
 
+Proxy_DNS output:
+![DNS Resolution Output](screenshots/proxy server output.png)
 ---
 
 ## **🔄 Future Enhancements**
