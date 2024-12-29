@@ -59,6 +59,8 @@ The project is divided into the following components:
 
 ### **5. Proxy Optimization**
 - Local caching in the proxy server for faster lookups and reduced main DNS load.
+  
+![Features](screenshots/g2.webp)
 
 ---
 
